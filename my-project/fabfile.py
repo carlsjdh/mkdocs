@@ -10,6 +10,4 @@ def deploy():
     local("git push")
     with cd("~/mkdocs"):
         run("git pull")
-        run("source /home/alu5896/.virtualenvs/mkdocs/bin")
-        run("cd my-project")
-        run("mkbuild")
+        run("cd my-project && source /home/alu5896/.virtualenvs/mkdocs/bin/activate && mkdocs build")
